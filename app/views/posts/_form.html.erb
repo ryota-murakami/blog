@@ -1,0 +1,26 @@
+<%= form_for @post do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= @post.errors.count %>件のエラーが発生したため保存ができませんでした。</h2>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text, "内容" %><br>
+    <%= f.text_area :text, cols: 60, rows: 8 %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

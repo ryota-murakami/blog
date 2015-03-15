@@ -1,0 +1,22 @@
+<div class="post_info">
+  <p>
+    <strong>タイトル:</strong>
+    <%= @post.title %>
+  </p>
+
+  <p>
+    <strong>内容:</strong>
+    <%= @post.text %>
+  </p>
+</div>
+
+<h2>コメント</h2>
+<%= render @post.comments %>
+
+<!-- 追加箇所 開始 -->
+<h2>コメントを追加</h2>
+<%= render "comments/form" %>
+<!-- 追加箇所 終了 -->
+
+<%= link_to '戻る', posts_path %>
+|<%= link_to '編集', edit_post_path(@post) %>

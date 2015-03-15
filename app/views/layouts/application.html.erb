@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ja="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='<%= controller.controller_name %>'>
+<div id="wrap">
+  <header id="header">
+    <div class="inner">
+      <h1 id="logo"><%= link_to "Sample My Blog", root_path %></h1>
+      <p id="catchcopy">Description or something....</p>
+    </div><!-- /.inner -->
+  </header><!-- /#header -->
+
+  <div id="main">
+    <%= yield %>
+  </div><!-- /#main -->
+
+</div><!-- /#wrap -->
+</body>
+</html>
