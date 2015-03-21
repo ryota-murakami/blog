@@ -19,3 +19,4 @@
 # Ignore all gem
 /vendor/cache
 /vendor/gems
+/vendor/bundle
