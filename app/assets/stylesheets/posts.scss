@@ -12,12 +12,15 @@
   .post_info {
     padding: 20px 5px;
     margin-bottom: 30px;
-
-    background-color: $baseLightGray;
     border-radius: 5px;
 
     strong {
       font-size: 110%;
     }
   }
+
+  table{
+    width:100%;
+  }
+
 }

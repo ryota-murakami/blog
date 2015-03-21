@@ -1,13 +1,7 @@
-<div class="post_info">
-  <p>
-    <strong>タイトル:</strong>
-    <%= @post.title %>
-  </p>
+<h1><%= @post.title %></h1>
 
-  <p>
-    <strong>内容:</strong>
-    <%= @post.text %>
-  </p>
+<div class="post_info">
+    <%= simple_format(@post.text) %>
 </div>
 
 <h2>コメント</h2>

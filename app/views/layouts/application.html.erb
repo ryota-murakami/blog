@@ -12,8 +12,8 @@
 
   <header id="header">
     <div class="inner">
-      <h1 id="logo"><%= link_to "Sample My Blog", root_path %></h1>
-      <p id="catchcopy">Description or something....</p>
+      <h1 id="logo"><%= link_to "the beautiful world", root_path, :id => "logo-link" %></h1>
+      <p id="catchcopy">コンピュータを中心にわくわくする内容をお届けします</p>
     </div><!-- /.inner -->
   </header><!-- /#header -->
 
@@ -23,6 +23,7 @@
       <% if user_signed_in? %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       <% else %>
+
       <% end %>
     </nav>
   </header>

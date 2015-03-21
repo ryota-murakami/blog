@@ -4,6 +4,7 @@ $baseGray:      #aaa;
 $baseLightGray: #eee;
 $baseBlue:      #428bca;
 $baseLightBlue: #5bc0de;
+$BlueForLink: #429bb2;
 
 /*-----------------------------
 
@@ -47,7 +48,7 @@ a,
 a:-webkit-any-link {
   text-decoration: none;
 
-  color: $baseGray;
+  color: $BlueForLink;
 
   &:hover {
     color: $baseLightBlue;
@@ -90,6 +91,10 @@ header {
     #logo {
       font-size: 250%;
       text-decoration: none;
+    }
+
+    #logo-link {
+      color:$baseGray;
     }
 
     #catchcopy {
