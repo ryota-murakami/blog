@@ -1,0 +1,29 @@
+<h1>新しい投稿</h1>
+<%= form_for :post, url: posts_path do |f| %>
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @post.errors.count %>件のエラーが発生した為保存できませんでした。</h2>
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <p>
+    <%= f.label :title, "タイトル" %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text, "内容" %><br>
+    <%= f.text_area :text, cols: 60, rows:8 %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to "戻る", posts_path %>
