@@ -16,6 +16,9 @@
 !/log/.keep
 /tmp
 
+# compiled css js
+/public/assets/
+
 # Ignore all gem
 /vendor/cache
 /vendor/gems
