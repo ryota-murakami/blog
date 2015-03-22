@@ -13,4 +13,7 @@
 <!-- 追加箇所 終了 -->
 
 <%= link_to '戻る', posts_path %>
-|<%= link_to '編集', edit_post_path(@post) %>
+
+<% if user_signed_in? %>
+<%= link_to '編集', edit_post_path(@post) %>
+<% end %>
