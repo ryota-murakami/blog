@@ -13,5 +13,7 @@
 </table>
 
 <% if user_signed_in? %>
-  <%= link_to "新しい投稿", new_post_path %>
+  <div id="new-post-link">
+    <%= link_to "新しい投稿", new_post_path %>
+  </div>
 <% end %>

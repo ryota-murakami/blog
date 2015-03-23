@@ -21,7 +21,9 @@
     <nav>
       <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
       <% if user_signed_in? %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <div id="logout-link" class="text-right">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </div>
       <% else %>
 
       <% end %>
