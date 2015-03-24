@@ -11,3 +11,22 @@
 .text-right {
   text-align:right;
 }
+
+.float-left {
+  float:left;
+}
+
+.float-right {
+  float:right;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.position-middle {
+  position:relative;
+  top:30%
+}

@@ -1,3 +1,22 @@
-// Place all the styles related to the Comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "global.css.scss";
+
+.comment-row {
+  border-bottom: 1px dotted $baseLightBlue;
+}
+
+.comment-body {
+  margin:10px;
+}
+
+
+.commenter {
+  margin:10px;
+}
+
+.comment-at {
+  margin:10px;
+}
+
+.comment-delete {
+  margin:10px;
+}

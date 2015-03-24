@@ -1,16 +1,21 @@
-<p>
-  <strong>コメンター:</strong>
-  <%= comment.commenter %>
-</p>
+<div class="comment-row clearfix">
 
-<p>
-  <strong>コメント:</strong>
-  <%= simple_format comment.body %>
-</p>
-
-<% if user_signed_in? %>
-  <p>
-    <%= link_to 'コメント削除', [comment.post, comment],
-                  method: :delete, data:{ confirm: '削除しますか？' }  %>
+  <p class="comment-body">
+    <%= nl2br(comment.body) %>
   </p>
-<% end %>
+
+  <p class="commenter float-left">
+    <%= comment.commenter %>
+  </p>
+
+  <p class="comment-at float-left">
+    <%= comment.created_at %>
+  </p>
+
+  <% if user_signed_in? %>
+    <p class="comment-delete float-left">
+      <%= link_to 'コメント削除', [comment.post, comment],
+                    method: :delete, data:{ confirm: '削除しますか？' }  %>
+    </p>
+  <% end %>
+</div><!-- .comment-row -->

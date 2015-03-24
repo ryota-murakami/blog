@@ -1,7 +1,6 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <p>
-    <%= f.label :commenter, "コメンター" %><br>
-    <%= f.text_field :commenter %>
+    <%= f.text_field :commenter, :size => "30" %>
   </p>
 
   <p>
