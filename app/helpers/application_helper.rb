@@ -5,4 +5,8 @@ module ApplicationHelper
       str.gsub(/\r\n|\r|\n/, "<br>").html_safe
   end
 
+  def escape_article(str)
+      str.gsub(/<(script.?)>/x,"&lt;\\1&gt;").gsub(/<(style.?)>/x,"&lt;\\1&gt;").html_safe
+  end
+
 end

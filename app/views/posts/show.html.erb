@@ -1,7 +1,7 @@
 <h1><%= @post.title %></h1>
 
 <div class="post_info">
-    <%= nl2br(@post.text) %>
+    <%= escape_article(@post.text) %>
 </div>
 
 <h2>コメント</h2>
