@@ -17,3 +17,21 @@
     <%= link_to "新しい投稿", new_post_path %>
   </div>
 <% end %>
+
+<% content_for :footer do %>
+  <nav>
+    <ul class="nav nav-pills">
+      <li role="presentation">
+        <%= link_to "about", :controller => "page", :action => "about" %>
+      </li>
+      <li role="presentation">
+        <%= link_to "はてなブログ", "http://malloc.hatenablog.com" %>
+      </li>
+      <% if user_signed_in? %>
+        <li role="presentation" class="pull-right">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+<% end %>

@@ -18,22 +18,8 @@
   </main>
 
   <footer>
-  <nav>
-    <ul class="nav nav-pills">
-      <li role="presentation">
-        <a href="#">about</a>
-      </li>
-      <li role="presentation">
-        <a href="http://malloc.hatenablog.com">はてなブログ</a>
-      </li>
-      <% if user_signed_in? %>
-        <li role="presentation" class="pull-right">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </li>
-      <% end %>
-    </ul>
-  </nav>
-</footer>
+    <%= yield :footer %>
+  </footer>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
