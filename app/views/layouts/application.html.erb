@@ -3,33 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Blog</title>
+  <title>ふつうのブログ</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-<div id="root-container">
+
   <header class="page-header">
-      <h1><%= link_to "the beautiful world", root_path, :id => "logo-link" %>　<small>ふつうの日記をカキコ“〆(^∇゜*)♪</small></h1>
+      <h1><%= link_to "ふつうのブログ", root_path, :id => "logo-link" %>　<small>ふつうの日記をカキコ“〆(^∇゜*)♪</small></h1>
   </header>
-
-  <nav>
-    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-    <% if user_signed_in? %>
-      <div id="logout-link" class="text-right">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </div>
-    <% else %>
-
-    <% end %>
-  </nav>
 
   <main>
     <%= yield %>
   </main>
 
-</div><!-- #root-container -->
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <footer>
+  <nav>
+    <ul class="nav nav-pills">
+      <li role="presentation">
+        <a href="#">about</a>
+      </li>
+      <li role="presentation">
+        <a href="http://malloc.hatenablog.com">はてなブログ</a>
+      </li>
+      <% if user_signed_in? %>
+        <li role="presentation" class="pull-right">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</footer>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

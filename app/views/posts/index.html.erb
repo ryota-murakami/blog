@@ -1,6 +1,7 @@
-<table>
+<table class="table index-table">
   <% @posts.each do |post| %>
     <tr>
+      <td style="width:100px;"><%= pick_datetime(post.created_at) %></td>
       <td><%= link_to post.title,post %></td>
       <% if user_signed_in? %>
         <td><%= link_to '編集', edit_post_path(post) %></td>
@@ -8,7 +9,6 @@
                   method: :delete, data: { confirm: '削除しますか？' } %></td>
       <% end %>
     </tr>
-
   <% end %>
 </table>
 
