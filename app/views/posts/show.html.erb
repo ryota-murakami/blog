@@ -1,14 +1,16 @@
-<h1><%= @post.title %></h1>
+<article>
+  <h2><%= @post.title %></h2>
 
-<div class="post_info">
-    <%= escape_article(@post.text) %>
-</div>
+  <section class="post_info">
+      <%= escape_article(@post.text) %>
+  </section>
+</article>
 
-<h2>コメント</h2>
+<h3>コメント</h3>
 <%= render @post.comments %>
 
 <!-- 追加箇所 開始 -->
-<h2>コメントを追加</h2>
+<h3>コメントを追加</h3>
 <%= render "comments/form" %>
 <!-- 追加箇所 終了 -->
 
