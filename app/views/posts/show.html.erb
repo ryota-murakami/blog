@@ -6,13 +6,14 @@
   </section>
 </article>
 
-<h3>コメント</h3>
-<%= render @post.comments %>
+<section>
+  <h3>コメント</h2>
+  <%= render @post.comments %>
+</section>
 
-<!-- 追加箇所 開始 -->
-<h3>コメントを追加</h3>
-<%= render "comments/form" %>
-<!-- 追加箇所 終了 -->
+<section style="margin-top:30px;">
+  <%= render "comments/form" %>
+</section>
 
 <%= link_to '戻る', posts_path %>
 
