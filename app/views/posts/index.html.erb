@@ -1,5 +1,5 @@
 <table class="table index-table">
-  <% @posts.each do |post| %>
+  <% @posts.each_with_index do |post,i| %>
     <tr>
       <td style="width:100px;"><%= pick_datetime(post.created_at) %></td>
       <td><%= link_to post.title,post %></td>
@@ -17,6 +17,8 @@
     <%= link_to "新しい投稿", new_post_path %>
   </div>
 <% end %>
+
+<%= paginate @posts %>
 
 <% content_for :footer do %>
   <%= render "shared/footer" %>
