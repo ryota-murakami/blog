@@ -1,0 +1,21 @@
+<nav>
+  <ul class="nav nav-pills">
+    <li>
+      <%= link_to "about", :controller => "page", :action => "about" %>
+    </li>
+    <li>
+      <%= link_to "hatena blog", "http://malloc.hatenablog.com" %>
+    </li>
+    <li>
+      <%= link_to "twitter", "https://twitter.com/malloc007" %>
+    </li>
+    <li>
+      <%= link_to "bookmeter", "http://bookmeter.com/u/469548/booklistnow" %>
+    </li>
+    <% if user_signed_in? %>
+      <li role="presentation" class="pull-right">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </li>
+    <% end %>
+  </ul>
+</nav>
