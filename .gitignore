@@ -23,3 +23,6 @@
 /vendor/cache
 /vendor/gems
 /vendor/bundle
+
+# Ignore tags file
+/tags
