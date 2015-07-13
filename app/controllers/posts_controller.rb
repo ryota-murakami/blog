@@ -1,13 +1,21 @@
 class PostsController < ApplicationController
 
+  # GET /?page=:page
   def index
     @posts = Post.page(params[:page]).order('created_at DESC')
   end
 
+  # GET /posts/new
   def new
     @post = Post.new
   end
 
+  # GET posts/:id
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  # POST /posts
   def create
     @post = Post.new(post_params)
     if @post.save
@@ -17,10 +25,12 @@ class PostsController < ApplicationController
     end
   end
 
+  # GET posts/:id/edit
   def edit
     @post = Post.find(params[:id])
   end
 
+  # PATCH posts/:id
   def update
     @post = Post.find(params[:id])
 
@@ -31,15 +41,12 @@ class PostsController < ApplicationController
     end
   end
 
+  # DELETE posts/:id
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
 
     redirect_to posts_path
-  end
-
-  def show
-    @post = Post.find(params[:id])
   end
 
   private
