@@ -13,9 +13,9 @@
       <h1><%= link_to "ふつうのブログ", root_path, :id => "logo-link" %>　<small>プログラミング×リベラルアーツ</small></h1>
   </header>
 
-  <main>
+  <div class="container-fluid" style="padding-left:0px;">
     <%= yield %>
-  </main>
+  </div>
 
   <footer>
     <%= yield :footer %>
