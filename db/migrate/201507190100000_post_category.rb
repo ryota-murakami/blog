@@ -1,7 +1,7 @@
 class PostCategory < ActiveRecord::Migration
   def change
     change_table(:categories) do |t|
-      t.references(:posts)
+      t.references(:post)
     end
   end
 end
