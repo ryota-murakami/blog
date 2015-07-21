@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    3.times{ @post.categories.build }
   end
 
   # GET posts/:id
@@ -51,6 +52,10 @@ class PostsController < ApplicationController
 
   private
      def post_params
-       params.require(:post).permit(:title, :text)
+       params.require(:post).permit(
+        :title,
+        :text,
+        categories_attributes: [:name]
+      )
      end
 end

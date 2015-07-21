@@ -21,6 +21,13 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <label>カテゴリ</label><br>
+    <%= f.fields_for :categories do |category_form| %>
+      <%= category_form.text_field :name %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= f.submit style: "margin-top:10px;" %>
   </p>
 <% end %>
