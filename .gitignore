@@ -26,3 +26,4 @@
 
 # Ignore tags file
 /tags
+/.tags_swap
