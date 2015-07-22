@@ -21,10 +21,13 @@
   </p>
 
   <p>
-    <label>カテゴリ</label><br>
-    <%= f.fields_for :categories do |category_form| %>
-      <%= category_form.text_field :name %>
-    <% end %>
+    <div class="field">
+      <label>カテゴリ</label><br>
+      <%= f.fields_for :categories do |builder| %>
+        <%= render 'category_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields "カテゴリ追加", f, :categories %>
+    </div>
   </p>
 
   <p>

@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
-    3.times{ @post.categories.build }
+    @post.categories.build
   end
 
   # GET posts/:id
