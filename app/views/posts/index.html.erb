@@ -1,16 +1,28 @@
-<table class="table index-table">
-  <% @posts.each_with_index do |post,i| %>
-    <tr>
-      <td style="width:100px;"><%= pick_datetime(post.created_at) %></td>
-      <td><%= link_to post.title,post %></td>
-      <% if user_signed_in? %>
-        <td><%= link_to '編集', edit_post_path(post) %></td>
-        <td><%= link_to '削除', post_path(post),
-                  method: :delete, data: { confirm: '削除しますか？' } %></td>
+<div class="row">
+  <div class="col-md-9" style="padding-left:0px;">
+    <table class="table index-table">
+      <% @posts.each_with_index do |post,i| %>
+        <tr>
+          <td style="width:100px;"><%= pick_datetime(post.created_at) %></td>
+          <td><%= link_to post.title,post %></td>
+          <% if user_signed_in? %>
+            <td><%= link_to '編集', edit_post_path(post) %></td>
+            <td><%= link_to '削除', post_path(post),
+                      method: :delete, data: { confirm: '削除しますか？' } %></td>
+          <% end %>
+        </tr>
       <% end %>
-    </tr>
-  <% end %>
-</table>
+    </table>
+  </div>
+  <div class="col-md-3">
+    <ul class="list-group">
+      <li class="list-group-item">日記</a></li>
+      <li class="list-group-item">アニメ</li>
+      <li class="list-group-item">映画</li>
+      <li class="list-group-item">イベント</li>
+    </ul>
+  </div>
+</div>
 
 <% if user_signed_in? %>
   <div id="new-post-link">

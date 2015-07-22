@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class PageControllerTest < ActionController::TestCase
-  test "should get about" do
+  def test_response_success
     get :about
     assert_response :success
   end
