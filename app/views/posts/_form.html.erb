@@ -23,8 +23,8 @@
   <p>
     <div class="field">
       <label>カテゴリ</label><br>
-      <%= f.fields_for :categories do |builder| %>
-        <%= render 'category_fields', f: builder %>
+      <%= f.fields_for :categories do |category| %>
+        <%= render 'category_fields', f: category %>
       <% end %>
       <%= link_to_add_fields "カテゴリ追加", f, :categories %>
     </div>
