@@ -6,6 +6,14 @@
   </section>
 </article>
 
+<section id="category" class="clearfix">
+  <ul class="list-inline pull-right">
+    <% @post.categories.each do |category| %>
+      <li><a href="#"><%= category.name %></a></li>
+    <% end %>
+  </ul>
+</section>
+
 <section>
   <h3>コメント</h2>
   <%= render @post.comments %>
