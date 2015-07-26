@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+   test "get rss feed" do
+     get :index, format: :rss
+     assert_response :success
+   end
 end
