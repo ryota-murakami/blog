@@ -3,6 +3,11 @@ class PostsController < ApplicationController
   # GET /?page=:page
   def index
     @posts = Post.page(params[:page]).order('created_at DESC')
+
+    respond_to do |format|
+      format.html
+      format.rss
+    end
   end
 
   # GET /posts/new
