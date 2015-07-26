@@ -13,8 +13,8 @@ xml.rss("version"    => "2.0",
     @posts.each do |post|
       xml.item do
         xml.title        post.title
-        xml.link         post_url(post)
-        xml.guid         post_url(post)
+        xml.link         'http://malloc.tokyo' + post_path(post)
+        xml.guid         'http://malloc.tokyo' + post_path(post)
         xml.description  post.text
         xml.pubDate      post.created_at.to_formatted_s(:rfc822)
         xml.dc :creator, 'ryota-murakami'
