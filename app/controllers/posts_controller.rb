@@ -55,7 +55,7 @@ class PostsController < ApplicationController
        params.require(:post).permit(
         :title,
         :text,
-        categories_attributes: [:name]
+        categories_attributes: [:id, :name, :_destroy],
       )
      end
 end
