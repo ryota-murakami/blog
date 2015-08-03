@@ -64,4 +64,7 @@ group :development, :test do
   gem "minitest-line" # 行番号指定でテスト実行出来る様にする
 
   gem "factory_girl" # DBのデータのモックを作成
+  
+  gem 'shoulda', '~> 3.5.0'
+  gem 'mocha', '~> 1.1.0'
 end
