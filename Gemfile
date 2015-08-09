@@ -49,4 +49,22 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # 必須
+  gem "minitest"
+  gem "minitest-rails"
+  gem "minitest-rails-capybara" # capybaraで結合テストできるようにする
+
+  gem "minitest-doc_reporter" # テスト結果の表示を整形
+
+  # 機能追加系
+  gem "minitest-stub_any_instance" # メソッドmockを追加できる様にする
+
+  gem "minitest-bang" # let文で遅延読み込みを使えるようにする
+  gem "minitest-line" # 行番号指定でテスト実行出来る様にする
+
+  gem "factory_girl" # DBのデータのモックを作成
+  
+  gem 'shoulda', '~> 3.5.0'
+  gem 'mocha', '~> 1.1.0'
 end
