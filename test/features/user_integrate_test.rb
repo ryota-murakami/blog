@@ -1,9 +1,8 @@
 require "test_helper"
 
 class UserIntegrateTest < Capybara::Rails::TestCase
-  test "sanity" do
+  test "show index page" do
     visit root_path
-    assert_content page, "Hello World"
-    refute_content page, "Goobye All!"
+    assert_content page, "ふつうのブログ"
   end
 end
