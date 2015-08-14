@@ -36,7 +36,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    ansi (1.5.0)
     arel (6.0.0)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -72,8 +71,6 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.3.0)
-    factory_girl (4.5.0)
-      activesupport (>= 3.0.0)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -111,17 +108,10 @@ GEM
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
-    minitest-bang (1.0.4)
-      minitest (>= 4.7.5)
     minitest-capybara (0.7.2)
       capybara (~> 2.2)
       minitest (~> 5.0)
       rake
-    minitest-doc_reporter (0.6.0)
-      ansi
-      minitest (~> 5.0)
-    minitest-line (0.6.3)
-      minitest (~> 5.0)
     minitest-metadata (0.5.3)
       minitest (>= 4.7, < 6.0)
     minitest-rails (2.1.1)
@@ -132,7 +122,6 @@ GEM
       minitest-capybara (~> 0.7.0)
       minitest-metadata (~> 0.5.0)
       minitest-rails (~> 2.1)
-    minitest-stub_any_instance (1.0.1)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multi_json (1.10.1)
@@ -241,7 +230,6 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
-  factory_girl
   hirb
   hirb-unicode
   jbuilder (~> 2.0)
@@ -249,13 +237,8 @@ DEPENDENCIES
   jquery-turbolinks
   kaminari
   less-rails
-  minitest
-  minitest-bang
-  minitest-doc_reporter
-  minitest-line
   minitest-rails
-  minitest-rails-capybara
-  minitest-stub_any_instance
+  minitest-rails-capybara (~> 2.1.1)
   mocha (~> 1.1.0)
   rails (= 4.2.0)
   sass-rails (~> 5.0)
