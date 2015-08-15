@@ -4,16 +4,16 @@
       <%= link_to "about", :controller => "page", :action => "about" %>
     </li>
     <li>
-      <%= link_to "hatena blog", "http://malloc.hatenablog.com" %>
+      <%= link_to "hatena blog", "http://malloc.hatenablog.com", {:target => "_new"} %>
     </li>
     <li>
-      <%= link_to "twitter", "https://twitter.com/malloc007" %>
+      <%= link_to "twitter", "https://twitter.com/malloc007", {:target => "_new"} %>
     </li>
     <li>
      <%= link_to "instagram", "https://instagram.com/ryota_murakam1/", {:target => "_new"} %>
     </li>
     <li>
-      <%= link_to "bookmeter", "http://bookmeter.com/u/469548/booklistnow" %>
+      <%= link_to "bookmeter", "http://bookmeter.com/u/469548/booklistnow", {:target => "_new"} %>
     </li>
     <% if user_signed_in? %>
       <li role="presentation" class="pull-right">
