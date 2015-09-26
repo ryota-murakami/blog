@@ -1,11 +1,10 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
-  <p>
-    <%= f.text_field :commenter, :size => "30" %>
-  </p>
-
-  <p>
-    <%= f.label :body, "コメント" %><br>
-    <%= f.text_area :body, cols: 60, rows: 8 %>
+  <div class="form-group">
+    <%= f.text_field :commenter, :size => "30", :placeholder => "お名前" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :body, cols: 60, rows: 6 , :placeholder => "コメント" , class: "form-control" %>
+  </div>
     <div class="hint">入力文字数:<span id="char_num">0</span></div>
   </p>
 

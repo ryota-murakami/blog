@@ -1,14 +1,12 @@
 $glay: #aaa;
 
 body {
-  width:980px;
-  margin: 0 16%;
-  height:100%;
-
+  color: #555;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
-  color: #555555;
   font-size: 15px;
+  height: 100%;
   line-height: 25px;
+  word-break: break-all;
 }
 
 #logo-link {
@@ -16,6 +14,50 @@ body {
 }
 
 footer {
-  position:relative;
-  bottom:0;
+  bottom: 0;
+  position: relative;
+}
+
+// PC
+@media (min-width: 768px) {
+  body {
+    margin: 0 16%;
+    width: 980px;
+  }
+
+  .container-fluid,
+  .post-table-container {
+    padding-left: 0;
+  }
+
+  .new_comment {
+    width: 60%;
+  }
+
+}
+
+// smart phone
+@media (max-width: 400px) {
+
+  body {
+    margin: 0;
+    width: 100%;
+  }
+
+  .page-header {
+    text-align: center;
+  }
+
+  .title-description {
+    display: none;
+  }
+
+  footer li:nth-child(5) {
+    display: none;
+  }
+
+  .post-title {
+    text-align: center;
+  }
+
 }

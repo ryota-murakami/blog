@@ -10,14 +10,14 @@
     </div>
   <% end %>
 
-  <p>
+  <div class="form-group">
     <%= f.label :title, "タイトル" %><br>
-    <%= f.text_field :title, :size => "100" %>
-  </p>
+    <%= f.text_field :title, :size => "100", class: "form-control" %>
+  </div>
 
-  <p>
+  <div class="form-group">
     <%= f.label :text, "内容" %><br>
-    <%= f.text_area :text, cols: 100, rows: 20 %>
+    <%= f.text_area :text, cols: 100, rows: 20 , class: "form-control" %>
   </p>
 
   <p>
