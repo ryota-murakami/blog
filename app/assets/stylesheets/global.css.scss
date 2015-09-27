@@ -52,8 +52,36 @@ footer {
     display: none;
   }
 
-  footer li:nth-child(5) {
-    display: none;
+  footer {
+    width: 100%;
+
+    li {
+      text-align: center;
+    }
+
+    li:nth-child(1) {
+      width: 22%;
+    }
+
+    li:nth-child(2) {
+      width: 26%;
+    }
+
+    li:nth-child(3) {
+      width: 22%;
+    }
+
+    li:nth-child(4) {
+      width: 22%;
+    }
+
+    li:nth-child(5) {
+      display: none;
+    }
+
+    .nav > li > a {
+      padding: 10px 0;
+    }
   }
 
   .post-title {
