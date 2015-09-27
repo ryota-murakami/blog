@@ -18,6 +18,7 @@
 
 # compiled css js
 /public/assets/
+/public/tmp/
 
 # Ignore all gem
 /vendor/cache
