@@ -1,10 +1,14 @@
 $glay: #aaa;
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   color: #555;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
   font-size: 15px;
-  height: 100%;
   line-height: 25px;
   word-break: break-all;
 }
@@ -15,11 +19,6 @@ body {
 
 #logo-link {
   color: $glay;
-}
-
-footer {
-  bottom: 0;
-  position: relative;
 }
 
 // PC
@@ -36,6 +35,10 @@ footer {
 
   .new_comment {
     width: 60%;
+  }
+
+  footer {
+    margin-top: 20px;
   }
 
 }
@@ -57,7 +60,7 @@ footer {
   }
 
   footer {
-    width: 100%;
+    margin-bottom: 10px;
 
     li {
       text-align: center;
