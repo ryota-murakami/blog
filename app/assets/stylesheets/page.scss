@@ -1,6 +1,23 @@
 .page {
   span {
-    display:inline-block;
-    width:70px;
+    display: inline-block;
+    width: 70px;
+  }
+
+  .hobby-list > ul {
+    margin: 20px 0;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  li:first-child {
+    font-weight: bold;
+    margin: 8px 0;
   }
 }
