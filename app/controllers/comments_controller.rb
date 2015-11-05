@@ -6,6 +6,8 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
 
+    CommentMailer.comment_email(@post, @comment).deliver_now
+
     redirect_to post_path(@post)
   end
 
