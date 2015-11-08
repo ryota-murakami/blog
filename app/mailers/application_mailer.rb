@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "from@tokyorefrain.lan.mail"
+  default from: "from@malloc.tokyo"
   layout 'mailer'
 end

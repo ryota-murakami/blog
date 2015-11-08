@@ -4,6 +4,6 @@ class CommentMailer < ApplicationMailer
     @commenter = comment.commenter
     @body = comment.body
 
-    mail to: "dolce1048@i.softbank.jp", subject: @title + " にコメントだよ！！"
+    mail to: "dojce1048@gmail.com", subject: @title + " にコメントだよ！！"
   end
 end
