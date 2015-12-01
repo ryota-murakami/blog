@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ふつうのブログ</title>
+  <meta name="description" content="<% if check_route('posts', 'show') %> <%= ApplicationController.helpers.strip_tags(@post.text).truncate(120) %> <% else %> 時事ネタ、食べ物、ネット、考え方、アニメなど生活全般を取り扱っております。 <% end %>">
+  <title><% if check_route('posts', 'show') %> <%= escape_article(@post.title) %> - <% end %>ふつうのブログ</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>

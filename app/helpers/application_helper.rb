@@ -22,4 +22,8 @@ module ApplicationHelper
     link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
   end
 
+  def check_route(controller_name, action_name)
+    controller.controller_name == controller_name && controller.action_name == action_name
+  end
+
 end
