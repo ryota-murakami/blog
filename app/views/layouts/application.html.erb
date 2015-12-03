@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html ja="ja">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="<% if check_route('posts', 'show') %> <%= ApplicationController.helpers.strip_tags(@post.text).truncate(120) %> <% else %> 時事ネタ、食べ物、ネット、考え方、アニメなど生活全般を取り扱っております。 <% end %>">
   <meta property="og:title" content="<% if check_route('posts', 'show') %> <%= escape_article(@post.title) %> - <% end %>ふつうのブログ">
   <meta property="og:description" content="<% if check_route('posts', 'show') %> <%= ApplicationController.helpers.strip_tags(@post.text).truncate(120) %> <% else %> 時事ネタ、食べ物、ネット、考え方、アニメなど生活全般を取り扱っております。 <% end %>">
+  <meta property="og:type" content="<% if check_route('posts', 'index') %>website<% else %>article<% end %>" />
   <meta property="og:url" content="<%= request.original_url %>">
   <meta name="og:image" content="https://dl.dropboxusercontent.com/s/308reogjemlws2y/%E3%82%89%E3%81%8D%E3%81%99%E3%81%9F.jpeg">
   <title><% if check_route('posts', 'show') %> <%= escape_article(@post.title) %> - <% end %>ふつうのブログ</title>
@@ -37,6 +38,23 @@
   ga('create', 'UA-68130749-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '571382893010084',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 </body>
 </html>
