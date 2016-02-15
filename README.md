@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/ryota-murakami/blog.svg)](https://travis-ci.org/ryota-murakami/blog)
 
-### 私個人用のブログです。  
+### 私個人用のブログです。  
 ###  http://malloc.tokyo  
 
 ## ドキュメントどもき
