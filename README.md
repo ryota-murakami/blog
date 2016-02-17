@@ -4,4 +4,4 @@
 ###  http://malloc.tokyo  
 
 ## ドキュメントどもき
-- `rake -vT unicornctl` unicorn操作コマンドの使い方を表示
+- `bundle exec rake -vT unicornctl` unicorn操作コマンドの使い方を表示
