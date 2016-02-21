@@ -1,0 +1,7 @@
+.git
+
+db/*.sqlite3
+log/*
+tmp
+vendor
+Vagrantfile
