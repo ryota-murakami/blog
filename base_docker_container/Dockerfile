@@ -13,10 +13,15 @@ RUN apt-get install -y wget curl git
 RUN apt-get install -y libc6-dev libc6 libc-dev gcc g++ cpp g++ build-essential
 RUN apt-get install -y zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev
 
+RUN sudo apt-get install lsof
+
 # supervisor, nginx...
 RUN apt-get install -y nginx supervisor
 RUN apt-get install -y libssl-dev libperconaserverclient18.1-dev
 RUN apt-get install -y nodejs
+
+# Install sqlite3
+RUN apt-get install libsqlite3-dev
 
 # Install ruby-build
 RUN git clone https://github.com/sstephenson/ruby-build.git .ruby-build
@@ -29,10 +34,8 @@ RUN ruby-build 2.2.2 /usr/local
 # Install bundler
 RUN gem update --system
 RUN gem install bundler --no-rdoc --no-ri
-RUN gem install mysql2 --version "=0.3.19" --no-rdoc --no-ri
 
 RUN gem install rails --version "~>4.2.0" --no-rdoc --no-ri
-RUN gem install unicorn  --version "~>4.9.0" --no-rdoc --no-ri
 
 
 
