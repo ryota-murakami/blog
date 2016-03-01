@@ -24,5 +24,5 @@ EXPOSE 22 80
 # @TODO supervisordで上手くnginxとunicornが起動しないので一旦保留
 # CMD ["/usr/bin/supervisord"]
 
-RUN sudo chmod +x /blog/scripts/docker_run.sh
-CMD ["/blog/scripts/docker_run.sh"]
+RUN sudo chmod +x /blog/bin/docker_run.sh
+CMD ["/blog/bin/docker_run.sh"]
