@@ -11,6 +11,7 @@
   <meta property="og:url" content="http://malloc.tokyo<% if check_route('posts', 'show') %>/posts/<%= @post.id %><% end %> ">
   <meta name="og:image" content="https://dl.dropboxusercontent.com/s/308reogjemlws2y/%E3%82%89%E3%81%8D%E3%81%99%E3%81%9F.jpeg">
   <title><% if check_route('posts', 'show') %> <%= escape_article(@post.title) %> - <% end %>ふつうのブログ</title>
+  <link rel="alternate" href="http://malloc.tokyo/posts.rss" type="application/rss+xml" title="ふつうのブログ">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
