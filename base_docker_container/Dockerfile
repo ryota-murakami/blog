@@ -35,8 +35,6 @@ RUN ruby-build 2.2.2 /usr/local
 RUN gem update --system
 RUN gem install bundler --no-rdoc --no-ri
 
-RUN gem install rails --version "~>4.2.0" --no-rdoc --no-ri
-
 
 
 ENTRYPOINT ["bash", "-l", "-c"]
