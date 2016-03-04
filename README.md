@@ -29,10 +29,17 @@ ubuntu 14.04に必須ライブラリ、Nginx、Ruby(bundler)のインストー�
 
 - <a href="https://github.com/ryota-murakami/blog/blob/master/Dockerfile" target="_blank">アプリケーションコンテナの`Dockerfile`</a>
 
-##### base_docker_containerの更新手順
+##### base_docker_containerの更新手順
 
 1. docker-machineなどでdockerホストにsshログイン
 1. `/blog/base_docker_container/Dockerfile`を編集
-1. base_docker_containerディレクトリで`docker build -t ryotamurakami/blog_base:<version> .`を叩きDockerimageを作成
+1. `blog/base_docker_container`ディレクトリで`docker build -t ryotamurakami/blog_base:<version> .`を叩きDockerimageを作成
 1. `docker login`でDockerhub認証
 1. `docker push ryotamurakami/blog_base:<version>`でDockerhubにpush
+
+##### アプリケーションコンテナの更新手順
+1. docker-machineなどでdockerホストにsshログイン
+1. `/blog/Dockerfile`やアプリケーションコードを編集
+1. `/blog`ディレクトリで`docker build -t ryotamurakami/blog:<version> .`を叩きDockerimageを作成
+1. `docker login`でDockerhub認証
+1. `docker push ryotamurakami/blog_base:<version>`でDockerhubにpush(DBファイルが含まれるのでprivateリポジトリ)
