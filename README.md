@@ -1,17 +1,19 @@
 [![Build Status](https://travis-ci.org/ryota-murakami/blog.svg)](https://travis-ci.org/ryota-murakami/blog)
 
-### 私個人用のブログです。  
-###  http://malloc.tokyo  
+### 個人用のブログです。  
+###  <a href="http://malloc.tokyo" target="_blank">http://malloc.tokyo</a>
 
-## ドキュメントどもき
+# ドキュメントどもき
 
-#### <a href="https://github.com/ryota-murakami/blog/blob/master/lib/tasks/unicornctl.rake" target="_blank">unicornctl.rake</a>
+## unicornctl.rake
+
+- <a href="https://github.com/ryota-murakami/blog/blob/master/lib/tasks/unicornctl.rake" target="_blank">unicornctl.rake</a>
 
 unicorn操作タスクをまとめています。
 
 - `bundle exec rake -vT unicornctl` unicorn操作コマンドの使い方を表示
 
-#### Dockerコンテナ
+## Dockerコンテナ
 
 このアプリは`Nginx + Unicorn + Rails + Sqlite`を一台のサーバで動かしていて、
 それを一つのDockerコンテナイメージにして管理しています。
