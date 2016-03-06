@@ -4,4 +4,5 @@ db/*.sqlite3
 log/*
 tmp
 vendor
-Vagrantfile
+public/assets/*
+.bundle
