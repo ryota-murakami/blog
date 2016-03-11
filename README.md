@@ -1,17 +1,10 @@
 [![Build Status](https://travis-ci.org/ryota-murakami/blog.svg)](https://travis-ci.org/ryota-murakami/blog)
 
-### 個人用のブログです。  
+個人用のブログです。  
+
 ###  <a href="http://malloc.tokyo" target="_blank">http://malloc.tokyo</a>
 
-# ドキュメントどもき
-
-## unicornctl.rake
-
-- <a href="https://github.com/ryota-murakami/blog/blob/master/lib/tasks/unicornctl.rake" target="_blank">unicornctl.rake</a>
-
-unicorn操作タスクをまとめています。
-
-- `bundle exec rake -vT unicornctl` unicorn操作コマンドの使い方を表示
+## ドキュメントどもき
 
 ## Dockerコンテナ
 
@@ -36,7 +29,7 @@ ubuntu 14.04に必須ライブラリ、Nginx、Ruby(bundler)のインストー�
 
 - <a href="https://github.com/ryota-murakami/blog/blob/master/Dockerfile" target="_blank">アプリケーションコンテナの`Dockerfile`</a>
 
-##### ベースコンテナの更新手順
+##### ベースコンテナイメージの更新手順
 
 1. docker-machineなどでdockerホストにsshログイン
 1. `/blog/base_docker_container/Dockerfile`を編集
@@ -44,9 +37,30 @@ ubuntu 14.04に必須ライブラリ、Nginx、Ruby(bundler)のインストー�
 1. `docker login`でDockerhub認証
 1. `docker push ryotamurakami/blog_base:<version>`でDockerhubにpush
 
-##### アプリケーションコンテナの更新手順
+##### アプリケーションコンテナイメージの更新手順
 1. docker-machineなどでdockerホストにsshログイン
 1. `/blog/Dockerfile`やアプリケーションコードを編集
 1. `/blog`ディレクトリで`docker build -t ryotamurakami/blog:<version> .`を叩きDockerimageを作成
 1. `docker login`でDockerhub認証
 1. `docker push ryotamurakami/blog_base:<version>`でDockerhubにpush(DBファイルが含まれるのでprivateリポジトリ)
+
+#### コンテナの起動方法
+1. docker-machineなどでdockerホストにsshログイン
+1. `docker run -itd -p 80:80 ryotamurakami/blog:<version>`
+1. ポートフォワードしているので、dockerホストにhttp接続すればコンテナ上のアプリにアクセスできる
+
+
+## コマンドなど
+
+### unicornctl.rake
+
+- <a href="https://github.com/ryota-murakami/blog/blob/master/lib/tasks/unicornctl.rake" target="_blank">unicornctl.rake</a>
+
+unicorn操作タスクをまとめています。
+
+- `bundle exec rake -vT unicornctl` unicorn操作コマンドの使い方を表示
+
+### bundle exec rake secret
+<a href="https://github.com/ryota-murakami/blog/blob/master/config/secrets.yml" target="_blank">blog/config/secrets.yml</a>にある通り、railsはproduction環境で動かす際**SECRET_KEY_BASE**という環境変数にハッシュを格納しておく必要があるので  
+`bundle exec rake secret`でハッシュを生成して環境変数に登録しておく。  
+現在はDockerfile内でコンテナビルド時にこのコマンドが実行されるように設定している。
