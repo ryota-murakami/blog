@@ -16,13 +16,9 @@ RUN bundle exec rake assets:precompile RAILS_ENV=production
 
 RUN bundle exec rake db:migrate RAILS_ENV=production
 
-COPY config/supervisord.conf /etc/supervisor/config.d/supervisord.conf
+COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY config/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 22 80
 
-# @TODO supervisordで上手くnginxとunicornが起動しないので一旦保留
-# CMD ["/usr/bin/supervisord"]
-
-RUN sudo chmod +x /blog/bin/docker_run.sh
-CMD ["/blog/bin/docker_run.sh"]
+CMD ["/usr/bin/supervisord"]
