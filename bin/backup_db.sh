@@ -1,6 +1,6 @@
 #!/bin/bash
-BLOG_DIR=/home/ec2-user/blog
-PROD_DB_FILE=$BLOG_DIR/db/production.sqlite3
+BLOG_DIR=/home/core
+PROD_DB_FILE=$BLOG_DIR/production.sqlite3
 LOCAL_ROOT_DIR=$(cd $(dirname $0)/..; pwd)
 DB_DIR=$LOCAL_ROOT_DIR/db
 
