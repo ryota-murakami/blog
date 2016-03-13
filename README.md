@@ -46,7 +46,7 @@ ubuntu 14.04に必須ライブラリ、Nginx、Ruby(bundler)のインストー�
 
 #### コンテナの起動方法
 1. docker-machineなどでdockerホストにsshログイン
-1. `docker run -itd -p 80:80 ryotamurakami/blog:<version>`
+1. `docker run -itd -p 80:80 -v blog ryotamurakami/blog:<version> --name blog`
 1. ポートフォワードしているので、dockerホストにhttp接続すればコンテナ上のアプリにアクセスできる
 
 
