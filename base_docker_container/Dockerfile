@@ -7,7 +7,8 @@ RUN apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
 RUN echo deb http://repo.percona.com/apt trusty main >> /etc/apt/sources.list
 RUN echo deb-src http://repo.percona.com/apt trusty main >> /etc/apt/sources.list
 
-
+# nginxの最新安定版を入れるためにレポジトリ登録が必要
+RUN add-apt-repository ppa:nginx/stable
 RUN apt-get update
 RUN apt-get install -y wget curl git
 RUN apt-get install -y libc6-dev libc6 libc-dev gcc g++ cpp g++ build-essential
