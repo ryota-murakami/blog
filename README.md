@@ -43,9 +43,9 @@ ubuntu 14.04に必須ライブラリ、Nginx、Ruby(bundler)のインストー�
 1. `docker push ryotamurakami/blog:<version>`でDockerhubにpush(DBファイルが含まれるのでprivateリポジトリ)
 
 #### コンテナの起動方法
-1. docker-machineなどでdockerホストにsshログイン
-1. `docker run -itd -p 80:80 -v /blog ryotamurakami/blog:<version> --name blog`
-1. ポートフォワードしているので、dockerホストにhttp接続すればコンテナ上のアプリにアクセスできる
+dockerのvolume機能を利用してdbとlogディレクトリにホストマシンのディレクトリをマウントする
+`docker run -itd -p 80:80 -v /home/core/blog/db:/blog/db -v /home/core/blog/log:/blog/log --name blog ryotamurakami/blog:ver1.1`
+
 
 
 ## コマンドなど
