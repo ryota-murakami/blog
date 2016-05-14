@@ -2,7 +2,7 @@
   <h2 class="post-title"><%= @post.title %></h2>
 
   <section class="post_info">
-      <%= escape_article(@post.text) %>
+      <%= markdown(escape_article(@post.text)) %>
   </section>
 </article>
 

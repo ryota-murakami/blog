@@ -8,6 +8,7 @@ gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで
 gem 'twitter-bootstrap-rails' # Bootstrapの本体
 gem 'kaminari' #ページネーション
 gem 'jquery-turbolinks'
+gem 'redcarpet'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
