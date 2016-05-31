@@ -14,14 +14,14 @@
   </ul>
 </section>
 
-<section>
-  <h3>コメント</h2>
-  <%= render @post.comments %>
-</section>
+<!--<section>-->
+  <!--<h3>コメント</h2>-->
+  <!--<%= render @post.comments %>-->
+<!--</section>-->
 
-<section style="margin-top:30px;">
-  <%= render "comments/form" %>
-</section>
+<!--<section style="margin-top:30px;">-->
+  <!--<%= render "comments/form" %>-->
+<!--</section>-->
 
 <% if user_signed_in? %>
 <%= link_to '編集', edit_post_path(@post) %>
