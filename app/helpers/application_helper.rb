@@ -5,6 +5,15 @@ module ApplicationHelper
       str.gsub(/\r\n|\r|\n/, "<br>").html_safe
   end
 
+  def article_format(str)
+    str = escape_article(str)
+    url_to_hatena_blog_card(str)
+  end
+
+  def url_to_hatena_blog_card(str)
+    str.gsub(/(https?:\/\/\S+)/, '<iframe src="http://hatenablog.com/embed?url=\1" scrolling="no" frameborder="0" style="width:100%; height:155px; max-width:500px;"></iframe>')
+  end
+
   def escape_article(str)
       str.gsub(/<(script.?)>/x,"&lt;\\1&gt;").gsub(/<(style.?)>/x,"&lt;\\1&gt;").html_safe
   end
