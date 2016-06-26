@@ -18,12 +18,12 @@
 <body class='<%= controller.controller_name %>'>
 
   <header class="page-header">
-      <h1><%= link_to "ふつうのブログ", root_path, :id => "logo-link" %><small class="title-description">多分動くと思うからリリースしようぜ</small></h1>
+      <h1><%= link_to "ふつうのブログ", root_path, :id => "logo-link" %><small class="title-description"></small></h1>
   </header>
 
-  <div class="container">
+  <main class="container">
     <%= yield %>
-  </div>
+  </main>
 
   <footer>
     <%= yield :footer %>
