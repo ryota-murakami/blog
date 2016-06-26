@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def url_to_hatena_blog_card(str)
-    str.gsub(/(https?:\/\/\S+)/, '<iframe src="http://hatenablog.com/embed?url=\1" scrolling="no" frameborder="0" style="width:100%; height:155px; max-width:500px;"></iframe>')
+    str.gsub(/\[(https?:\/\/\S+):embed:cite\]/, '<iframe src="http://hatenablog.com/embed?url=\1" scrolling="no" frameborder="0" style="width:100%; height:155px; max-width:500px;"></iframe>')
   end
 
   def escape_article(str)
