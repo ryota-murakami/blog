@@ -1,9 +1,0 @@
-.git
-
-db/development.sqlite3
-db/test.sqlite3
-log/*
-tmp
-vendor
-public/assets/*
-.bundle
