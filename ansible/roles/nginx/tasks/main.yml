@@ -1,0 +1,2 @@
+- name: Add nginx stable repository
+  apt_repository: repo="ppa:nginx/stable"
