@@ -32,3 +32,5 @@
 config/tmp/
 
 ansible/site.retry
+
+fabfile.pyc
