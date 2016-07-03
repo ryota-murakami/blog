@@ -6,7 +6,11 @@
 
 #### ansible-playbook -i ansible/inventory/production ansible/site.yml
 
-サーバ設定。
+サーバ設定
+
+#### fab deploy
+
+デプロイ
 
 #### <a href="https://github.com/ryota-murakami/blog/blob/master/lib/tasks/unicornctl.rake" target="_blank">unicornctl.rake</a>
 
