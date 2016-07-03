@@ -1,0 +1,12 @@
+- name: Add nginx stable repository
+  apt_repository: repo="ppa:nginx/stable"
+
+- name: Install nginx
+  apt: name=nginx state=present
+
+- name: Unlink default
+  file: path=/etc/nginx/sites-enabled/default state=absent
+
+- name: Copy nginx.conf
+  template: src=nginx.conf dest=/etc/nginx/nginx.conf
+  notify: restart nginx

@@ -2,9 +2,11 @@
 
 個人用のブログです。 <a href="http://malloc.tokyo" target="_blank">http://malloc.tokyo</a>
 
-## ドキュメントどもき
-
 ## コマンドなど
+
+#### ansible-playbook -i ansible/inventory/production ansible/site.yml
+
+サーバ設定。
 
 #### <a href="https://github.com/ryota-murakami/blog/blob/master/lib/tasks/unicornctl.rake" target="_blank">unicornctl.rake</a>
 

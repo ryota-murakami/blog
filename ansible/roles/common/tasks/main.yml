@@ -1,0 +1,10 @@
+- name: apt-get update
+  apt: update_cache=yes
+
+- name: apt-get install
+  apt: name={{ item }} update_cache=yes
+  with_items:
+    - make
+    - gcc
+    - curl
+    - git
