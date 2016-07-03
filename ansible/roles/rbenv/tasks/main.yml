@@ -26,6 +26,7 @@
     - libffi-dev
     - libgdbm3
     - libgdbm-dev
+    - libsqlite3-dev
 
 - name: Install ruby-build as rbenv plugin
   git: repo=https://github.com/sstephenson/ruby-build.git dest=~/.rbenv/plugins/ruby-build
