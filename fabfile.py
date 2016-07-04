@@ -24,7 +24,11 @@ def _rails_up():
         with shell_env(SECRET_KEY_BASE=res):
             run('bundle exec rake assets:precompile RAILS_ENV=production')
             run('bundle exec rake db:migrate RAILS_ENV=production')
-            run('unicorn_rails -c config/unicorn.conf -E production -D')
+            is_unicorn_running = run("ps -ef | grep unicorn_rails | grep -v 'grep' | wc -l")
+            if int(is_unicorn_running) == 0:
+                run('rake unicornctl:start')
+            else :
+                run('rake unicornctl:restart')
 
 def _rsync():
     rsync_project(
