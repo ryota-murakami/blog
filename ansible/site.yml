@@ -4,3 +4,4 @@
     - common
     - nginx
     - rbenv
+    - cron
