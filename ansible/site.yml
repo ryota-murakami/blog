@@ -1,7 +1,0 @@
----
-- hosts: web+db
-  roles:
-    - common
-    - nginx
-    - rbenv
-    - cron

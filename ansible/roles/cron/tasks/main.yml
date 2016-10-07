@@ -1,2 +1,0 @@
-- name: renew letsencrypt
-  cron: name="renew letsencrypt" minute="0" hour="0" day="1" job="/root/certbot/certbot-auto renew"
