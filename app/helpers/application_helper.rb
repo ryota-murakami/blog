@@ -35,4 +35,7 @@ module ApplicationHelper
     controller.controller_name == controller_name && controller.action_name == action_name
   end
 
+  def get_title()
+      "Super Cali Fragilistic Expiali Docious"
+  end
 end

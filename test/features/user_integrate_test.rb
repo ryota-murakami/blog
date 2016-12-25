@@ -5,7 +5,7 @@ class UserIntegrateTest < Capybara::Rails::TestCase
     context "common user" do
       scenario "show index page" do
         visit root_path
-        assert_content page, "ふつうのブログ"
+        assert_content page, "Super Cali Fragilistic Expiali Docious"
       end
     end
   end

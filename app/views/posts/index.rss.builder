@@ -4,7 +4,7 @@ xml.rss("version"    => "2.0",
         "xmlns:dc"   => "http://purl.org/dc/elements/1.1/",
         "xmlns:atom" => "http://www.w3.org/2005/Atom") do
   xml.channel do
-    xml.title       'ふつうのブログ'
+    xml.title       get_title()
     xml.link        'http://malloc.tokyo'
     xml.pubDate     Time.now.rfc822
     xml.description '日常で感じた技術以外の話題を書いていますヽ(*・ω・)ﾉ'
