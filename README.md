@@ -35,7 +35,7 @@ productionに適用するには`RAILS_ENV=production`を忘れないよう注意
 <a href="https://github.com/ryota-murakami/blog/tree/master/db" target="_blank">DB設定ファイル</a>に沿ってマイグレーションする。
 productionに適用するには`RAILS_ENV=production`を忘れないよう注意。
 
-#### `./bin/backup.sh`
+#### `./bin/backup_db.sh`
 
 producitonのsqliteファイルをローカルに`production.sqlite3`,`development.sqlite3`としてコピーする。
 `~/.ssh/config`に`malloc.tokyo`の接続情報を準備しておくこと。
