@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 category1:
+  id: 1
   name: hobby
-  post: post1
+  post_id: 1
 
 category2:
+  id: 2
   name: lifehack
-  post: post1
+  post_id: 1
