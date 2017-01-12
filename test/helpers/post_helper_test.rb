@@ -3,7 +3,7 @@ require 'test_helper'
 describe MarkdownHelper do
   before do
     class TestHelper < ActionView::Base
-      include ApplicationHelper
+      include PostHelper
     end
     @helper = TestHelper.new
   end
