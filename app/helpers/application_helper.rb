@@ -36,6 +36,6 @@ module ApplicationHelper
   end
 
   def get_title()
-      "Super Cali Fragilistic Expiali Docious"
+      "ふつうのブログ"
   end
 end
