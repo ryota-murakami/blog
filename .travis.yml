@@ -1,6 +1,13 @@
 language: ruby
+
+git:
+  submodules: false
+
 cache: bundler
+
 bundler_args: --without production deployment
+
 rvm:
   - 2.2.0
+
 script: bundle exec rake test
