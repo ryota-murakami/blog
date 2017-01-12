@@ -13,4 +13,12 @@ class PostsControllerTest < ActionController::TestCase
     assert_response :success
     assert_template :index
   end
+
+  test "GET posts/:id" do
+    get :show, id: 1
+    assert_response :success
+    assert_template :show
+    assert_not_nil assigns(:post)
+    assert_select 'h2', 'MyPost1'
+  end
 end
