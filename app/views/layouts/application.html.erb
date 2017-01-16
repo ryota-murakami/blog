@@ -9,7 +9,7 @@
   <meta property="og:description" content="<% if check_route('posts', 'show') %> <%= ApplicationController.helpers.strip_tags(@post.text).truncate(120) %> <% else %> 時事ネタ、食べ物、ネット、考え方、アニメなど生活全般を取り扱っております。 <% end %>">
   <meta property="og:type" content="<% if check_route('posts', 'index') %>website<% else %>article<% end %>" />
   <meta property="og:url" content="http://malloc.tokyo<% if check_route('posts', 'show') %>/posts/<%= @post.id %><% end %> ">
-  <meta name="og:image" content="https://dl.dropboxusercontent.com/s/308reogjemlws2y/%E3%82%89%E3%81%8D%E3%81%99%E3%81%9F.jpeg">
+  <meta name="og:image" content="<%= asset_url('ogp.jpg') %>">
   <title><% if check_route('posts', 'show') %> <%= escape_article(@post.title) %> - <% end %><%= get_title() %></title>
   <link rel="alternate" href="http://malloc.tokyo/posts.rss" type="application/rss+xml" title="<%= get_title() %>">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
