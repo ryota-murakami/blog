@@ -2,7 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
-  config.cache_classes = false
+  config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -12,7 +12,7 @@ Rails.application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -53,7 +53,6 @@ Rails.application.configure do
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-  config.logger = Logger.new('log/production.log', 5, 10 * 1024 * 1024)
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
@@ -77,23 +76,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
-
-  config.assets.compile = true
-
-  config.reload_classes_only_on_change = true
-
-  config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:               'smtp.gmail.com',
-    port:      	           587,
-    domain:                'malloc.tokyo',
-    user_name:             'dojce1048@gmail.com',
-    password:              'integratyper',
-    authentication:        'plain',
-    enable_starttls_auto:  true
-  }
-
 end

@@ -24,6 +24,7 @@
 /vendor/cache
 /vendor/gems
 /vendor/bundle
+vendor/ruby
 
 # Ignore tags file
 /tags
