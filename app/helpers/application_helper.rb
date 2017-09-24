@@ -13,6 +13,6 @@ module ApplicationHelper
   end
 
   def get_title()
-      "ふつうのブログ"
+      "Effective Day"
   end
 end
