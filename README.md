@@ -4,21 +4,6 @@
 
 ## コマンドなど
 
-#### ansible-playbook -i ansible/inventory/production ansible/site.yml
-
-サーバ設定
-
-#### fab deploy
-
-デプロイ
-
-#### <a href="https://github.com/ryota-murakami/blog/blob/master/lib/tasks/unicornctl.rake" target="_blank">unicornctl.rake</a>
-
-unicorn操作タスクをまとめています。
-
-#### `bundle exec rake -vT unicornctl`
-unicorn操作コマンドの使い方を表示
-
 #### `bundle exec rake secret`
 
 <a href="https://github.com/ryota-murakami/blog/blob/master/config/secrets.yml" target="_blank">blog/config/secrets.yml</a>にある通り、railsはproduction環境で動かす際**SECRET_KEY_BASE**という環境変数にハッシュを格納しておく必要があるので
