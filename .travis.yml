@@ -8,6 +8,6 @@ cache: bundler
 bundler_args: --without production deployment
 
 rvm:
-  - 2.2.0
+  - 2.4.0
 
 script: bundle exec rake test
