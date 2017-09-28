@@ -26,6 +26,9 @@ main {
 
 #logo-link {
   color: $glay;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 // PC
