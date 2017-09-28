@@ -15,7 +15,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "GET posts/:id" do
-    get :show, id: 1
+    get :show, params: { id: 1 }
     assert_response :success
     assert_template :show
     assert_not_nil assigns(:post)
