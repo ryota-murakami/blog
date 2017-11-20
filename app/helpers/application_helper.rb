@@ -13,6 +13,6 @@ module ApplicationHelper
   end
 
   def get_title()
-      "Effective Day"
+      "ここがほむほーむヾ(*・ω・)ノ"
   end
 end
