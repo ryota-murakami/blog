@@ -1,4 +1,4 @@
-class PostCategory < ActiveRecord::Migration
+class PostCategory < ActiveRecord::Migration[5.1]
   def change
     change_table(:categories) do |t|
       t.references(:post)
