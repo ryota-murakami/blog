@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, only: [:sign_in, :sign_out, :session]
   root 'posts#index'
   get 'page/about' => 'page#about'
+  get 'page/profile' => 'page#profile'
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
