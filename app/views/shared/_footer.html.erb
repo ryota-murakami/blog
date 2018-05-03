@@ -3,7 +3,7 @@
     <li>
       <%= link_to "プロフィール", "/page/profile" %>
     </li>
-    <li>
+    <!-- <li>
         <%= link_to "Github", "https://github.com/ryota-murakami", {:target => "_blank"} %>
     </li>
     <li>
@@ -14,7 +14,7 @@
     </li>
     <li>
       <%= link_to "ブクログ", "http://booklog.jp/users/malloc007", {:target => "_blank"} %>
-    </li>
+    </li> -->
     <% if user_signed_in? %>
       <li role="presentation" class="pull-right">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
