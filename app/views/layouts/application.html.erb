@@ -19,6 +19,7 @@
   <meta name="twitter:site" content="@malloc007">
   <!--TODO: dynamic title -->
   <title><% if check_route('posts', 'show') %> <%= escape_article(@post.title) %> - <% end %><%= get_title() %></title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
   <link rel="alternate" href="http://malloc.tokyo/posts.rss" type="application/rss+xml" title="<%= get_title() %>">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
