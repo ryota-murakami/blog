@@ -1,9 +1,9 @@
 require 'test_helper'
 
 class PageControllerTest < ActionController::TestCase
-  test "GET # /about/page" do
-    get :about
+  test "GET /page/profile" do
+    get :profile
     assert_response :success
-    assert_template :about
+    assert_template :profile
   end
 end
