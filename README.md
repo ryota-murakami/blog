@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ryota-murakami/blog.svg?branch=master)](https://travis-ci.org/ryota-murakami/blog)
+
 # Blog
 
 個人用のブログです。 <a href="https://malloc.tokyo" target="_blank">https://malloc.tokyo</a>
