@@ -31,6 +31,10 @@ main {
   }
 }
 
+.footer > ul > li {
+  word-break: keep-all;
+}
+
 // PC
 @media (min-width: 768px) {
   body {
