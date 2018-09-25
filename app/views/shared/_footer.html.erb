@@ -3,18 +3,15 @@
     <li>
       <%= link_to "プロフィール", "/page/profile" %>
     </li>
-    <!-- <li>
-        <%= link_to "Github", "https://github.com/ryota-murakami", {:target => "_blank"} %>
-    </li>
     <li>
-      <%= link_to "twitter", "https://twitter.com/malloc007", {:target => "_blank"} %>
+      <%= link_to "twitter", "https://twitter.com/homuhoomu", {:target => "_blank"} %>
     </li>
-    <li>
-     <%= link_to "instagram", "https://instagram.com/ryota_murakam1/", {:target => "_blank"} %>
-    </li>
-    <li>
-      <%= link_to "ブクログ", "http://booklog.jp/users/malloc007", {:target => "_blank"} %>
-    </li> -->
+<!--    <li>-->
+     <%#= link_to "instagram", "https://instagram.com/ryota_murakam1/", {:target => "_blank"} %>
+<!--    </li>-->
+<!--    <li>-->
+      <%#= link_to "ブクログ", "http://booklog.jp/users/malloc007", {:target => "_blank"} %>
+<!--    </li>-->
     <% if user_signed_in? %>
       <li role="presentation" class="pull-right">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
