@@ -1,6 +1,7 @@
 module PostHelper
   def article_format(str)
     str = escape_article(str)
+    str = nl2br(str)
     url_to_hatena_blog_card(str)
   end
 
