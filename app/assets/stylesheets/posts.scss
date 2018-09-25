@@ -19,3 +19,17 @@
     width: 90%;
   }
 }
+
+// PC・Tablet
+@media (min-width: 568px) {
+  article {
+    width: 750px;
+  }
+}
+
+// smart phone
+@media (max-width: 424px) {
+  article {
+    width: 100%;
+  }
+}

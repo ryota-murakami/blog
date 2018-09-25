@@ -35,8 +35,8 @@ main {
   word-break: keep-all;
 }
 
-// PC
-@media (min-width: 768px) {
+// PC・Tablet
+@media (min-width: 568px) {
   body {
     margin: 0 16%;
     width: 980px;
@@ -54,7 +54,7 @@ main {
 }
 
 // smart phone
-@media (max-width: 414px) {
+@media (max-width: 424px) {
 
   body {
     margin: 0;
