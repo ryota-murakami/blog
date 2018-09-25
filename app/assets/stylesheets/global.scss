@@ -25,7 +25,7 @@ main {
 }
 
 .title-link {
-  color: $glay;
+  color: $glay !important;
   &:hover {
     text-decoration: none;
   }
