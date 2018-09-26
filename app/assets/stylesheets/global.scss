@@ -12,8 +12,17 @@ body {
   word-break: break-all;
 }
 
+header {
+  padding-bottom: 9px;
+  margin: 20px 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
 main {
   flex: 1;
+}
+
+footer {
 }
 
 .page-header {
@@ -38,7 +47,7 @@ main {
 // PC・Tablet
 @media (min-width: 568px) {
   body {
-    margin: 0 16%;
+    margin: 0 auto;
     width: 980px;
   }
 
