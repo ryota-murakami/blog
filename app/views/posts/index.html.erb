@@ -1,19 +1,18 @@
 <div class="root">
-  <div class="col-md-9 post-table-container">
-    <table class="table index-table">
-      <% @posts.each_with_index do |post, i| %>
-        <tr>
-          <td style="width:100px;"><%= pick_datetime(post.created_at) %></td>
-          <td><%= link_to post.title, post %></td>
-          <% if user_signed_in? %>
-            <td style="width: 50px;"><%= link_to '編集', edit_post_path(post) %></td>
-            <td style="width: 40px;"><%= link_to '削除', post_path(post),
-                                                 method: :delete, data: {confirm: '削除しますか？'} %></td>
-          <% end %>
-        </tr>
-      <% end %>
-    </table>
-  </div>
+
+  <table class="table index-table">
+    <% @posts.each_with_index do |post, i| %>
+      <tr>
+        <td style="width:100px;"><%= pick_datetime(post.created_at) %></td>
+        <td><%= link_to post.title, post %></td>
+        <% if user_signed_in? %>
+          <td style="width: 50px;"><%= link_to '編集', edit_post_path(post) %></td>
+          <td style="width: 40px;"><%= link_to '削除', post_path(post),
+                                               method: :delete, data: {confirm: '削除しますか？'} %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
 
   <% if user_signed_in? %>
     <div>

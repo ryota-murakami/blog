@@ -1,15 +1,13 @@
 .posts {
-  // root 'posts#index'
+  // GET / root 'posts#index'
   .root {
     margin-left: -15px;
     margin-right: -15px;
+    max-width: 980px;
   }
 
+  // GET posts/:id
   .container {
-    width: 100%;
-  }
-
-  .post-table-container {
     width: 100%;
   }
 
