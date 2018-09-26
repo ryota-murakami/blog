@@ -17,6 +17,16 @@ header {
   padding-bottom: 9px;
   margin: 20px 0 20px;
   border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title-link {
+    color: $glay !important;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 main {
@@ -25,21 +35,9 @@ main {
 
 footer {
   flex: 0 1 auto;
-}
-
-.title-description {
-  margin-left: 30px;
-}
-
-.title-link {
-  color: $glay !important;
-  &:hover {
-    text-decoration: none;
+  .footer > ul > li {
+    word-break: keep-all;
   }
-}
-
-.footer > ul > li {
-  word-break: keep-all;
 }
 
 // PC・Tablet
